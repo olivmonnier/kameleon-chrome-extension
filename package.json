@@ -1,0 +1,18 @@
+{
+  "name": "kameleon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "browserify": "browserify src/content.js > dist/content.js",
+    "uglify": "uglifyjs src/background.js -o dist/background.js && uglifyjs dist/content.js -o dist/content.js",
+    "dist": "npm run browserify && npm run uglify"
+  },
+  "author": "oliv75",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^12.0.1",
+    "jquery": "^2.1.4",
+    "uglify-js": "^2.6.1"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "Kameleon",
+  "version": "1.0.0",
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [ {
+    "js": [ "content.js" ],
+    "matches": [ "http://*/*", "https://*/*"]
+  }],
+  "browser_action": {
+    "name": "Kameleon",
+    "default_icon": {
+      "38": "ico38.png"
+    },
+    "icons": {
+      "48": "ico48.png",
+      "128": "ico128.png"
+    },
+    "default_title": "Kameleon"
+  }
+
+}
